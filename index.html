@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Cardedeu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('assets/img/background_cardedeu.png');
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            /*background-color: white;*/
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /*.logo {
+            font-weight: bold;
+            font-size: 24px;
+        }*/
+
+        .logo {
+            height: 80px;
+            /* Adjust as needed */
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .active {
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .datetime {
+            text-align: right;
+            /*background-color: rgba(0, 0, 0, 0.6);*/
+            padding: 2px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .main-content {
+            padding: 20px;
+            padding-top: 50px;
+            /*margen superior del contenedor*/
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            height: 125px;
+            /*200px*/
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 3px;
+            /* Reducido de 10px */
+            border-radius: 3px;
+            font-size: 10pt;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            width: auto;
+            /* Ajusta automáticamente al ancho del card */
+        }
+
+        .black-card {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .blue-card {
+            background-color: rgba(0, 102, 204, 0.5);
+        }
+
+        .app-card {
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .app-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="assets/img/logo_hoteles.png" alt="Hotel Hilton" class="logo">
+        </div>
+        <!--div class="menu">
+            <div>Your Stay</div>
+            <div class="active">TV & Entertainment</div>
+            <div>Checkout</div>
+        </div-->
+        <div class="datetime">
+            <div id="current-time" style="font-size: 24px;"></div>
+
+
+            <div class="weather_block " id="js_w_temp" style=" position: fixed; top: 59px; right: 85px; font-size: 1rem; color: white;
+            padding: 10px 10px; font-weight: bold; z-index: 1000; width:20px; heigth:15px;"></div>
+            <div class="weather_block" id="js_w_icon" style=" position: fixed; top: 52px; right: 95px; font-size: 1rem; color: white;
+            padding: 10px 10px; font-weight: bold; z-index: 1000; "></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card black-card" style="background-image: url('assets/img/bienvenida.png');">
+                        <!--div class="card-content">
+                            <div>Bienvenida</div>
+                        </div-->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card blue-card"
+                        style="background-image: url('assets/img/vuelos.jpg');  background-position: center; background-size: cover;  width: 100%; "
+                        onclick="redirectPagVuelos()">
+                        <div class="card-content" -->
+                            <!--div>Estado de Vuelos</div-->
+                            <div>Flight status</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card black-card" style="background-image: url('assets/img/cardedeu1.jpg'); "
+                        onclick="redirectServicios()">
+                        <div class="card-content" -->
+                            <!--div>Experiencia Hilton</div-->
+                            <div> Cardedeu Experience
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card black-card" style="background-image: url('assets/img/cardedeu2.jpg');"
+                        onclick="redirectMenu()">
+                        <div class="card-content">
+                            <div>Menu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card black-card" style="background-image: url('assets/img/discover/toursImage.png');"
+                        onclick="redirectDescubreSV()">
+                        <div class="card-content" -->
+                            <!--div>Descubre El Salvador</div-->
+                            <div>Discover El Salvador</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/1-streamtv.png');"
+                        onclick="redirectCCVEOTV()"></div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/5-vix.png');"
+                        onclick="redirectVix()"></div>
+
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/3-primevideo.png');"
+                        onclick="redirectPrimeVideo()"></div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/4-disneyplus.png'); "
+                        onclick="redirectDisney()"></div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/6-spotify.png');"
+                        onclick="redirectSpotify()"></div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <!--div class="app-card" style="background-image: url('assets/img/plataformas/7-netflix.png');"  onclick="redirectNetflix()"></div-->
+                    <div class="app-card" style="background-image: url('assets/img/plataformas/wifi.png');"
+                        onclick="redirectWifiQR()"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        //Redireccionar a red WIFI
+        function redirectWifiQR() {
+            window.location.href = 'wifi.html';
+        }
+
+
+        function redirectPagVuelos() {
+            window.location.href = 'vuelos.html';
+        }
+
+
+        //Redireccionar Directorio de servicios
+        function redirectServicios() {
+            window.location.href = 'servicios.html';
+        }
+
+        //Redireccionar Menu
+        function redirectMenu() {
+            window.location.href = 'menu.html';
+        }
+
+        //Redireccionar Descubre El Salvador
+        function redirectDescubreSV() {
+            window.location.href = 'descubresv.html';
+        }
+
+        //Redireccionar app Paramount
+        function redirectParamount() {
+            window.location.href = 'intent://www.paramountplus.com/#Intent;scheme=https;package=com.cbs.ca;end';
+        }
+
+        //Redireccionar app Prime Video
+        function redirectPrimeVideo() {
+            window.location.href = 'https://app.primevideo.com';
+        }
+
+
+        //Redireccionar app Disney
+        function redirectDisney() {
+            window.location.href = 'intent://www.disneyplus.com/#Intent;scheme=https;package=com.disney.disneyplus;end';
+        }
+
+
+        //Redireccionar app YouTube
+        function redirectYouTube() {
+            window.location.href = 'intent://www.youtube.com/#Intent;scheme=https;package=com.google.android.youtube.tv;end';
+        }
+
+
+        //Redireccionar app VIX
+        function redirectVix() {
+            window.location.href = 'intent://vix.com/#Intent;scheme=https;package=com.univision.prendetv;end';
+        }
+
+        //Redireccionar Spotify
+        function redirectSpotify() {
+            window.location.href = 'intent:#Intent;action=android.intent.action.VIEW;package=com.spotify.tv.android;scheme=spotify;end';
+        }
+
+        //Redireccionar Netflix
+        function redirectNetflix() {
+            window.location.href = 'intent:#Intent;action=android.intent.action.VIEW;package=com.netflix.ninja;scheme=netflix;end';
+        }
+
+
+        //Redireccionar CCVEOTV
+        function redirectCCVEOTV() {
+            window.location.href = 'intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LEANBACK_LAUNCHER;package=hn.cablecolor.ccveotv;end';
+        }
+    </script>
+
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?q=San Salvador, El Salvador&appid=5bedff37ad0c1cb81be45ad16e06a4cd&units=metric', true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText);
+                var temperatura = data.main.temp;
+                var condicionNombre = data.weather[0].description;
+                var icono = data.weather[0].icon;
+                var fecha = new Date();
+                var hora = fecha.getHours() + ':' + fecha.getMinutes();
+                var fechaCompleta = fecha.toLocaleDateString() + ' ' + hora;
+
+                // Mostrar la temperatura en Celsius
+                document.getElementById('js_w_temp').innerHTML = '<p class="weather_temperature">' + temperatura + '°C</p>';
+
+                // Mostrar el icono del tiempo según las condiciones
+                if (condicionNombre.includes('nubes') || condicionNombre.includes('lluvia')) {
+                    document.getElementById('js_w_icon').innerHTML = '<img src="assets/img/nublado.png" alt="Nubes" width=30; heigth=30px;>';
+                } else if (condicionNombre.includes('sol')) {
+                    document.getElementById('js_w_icon').innerHTML = '<img src="assets/img/soleado.png" alt="Sol"  width=30; heigth=30px;>';
+                } else {
+                    document.getElementById('js_w_icon').innerHTML = '<img src="assets/img/lluvia.png" alt="Lluvioso"  width=30; heigth=30px;; >';
+                }
+
+                // Mostrar la fecha y hora
+                document.getElementById('js_w_fecha').innerHTML = '<p class="weather_fecha">' + fechaCompleta + '</p>';
+            } else {
+                alert('¡Ups! No puedo obtener información de la API');
+            }
+        };
+        xhr.send();
+    </script>
+
+
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+
+</html>

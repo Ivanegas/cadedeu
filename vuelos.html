@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Dashboard - El Salvador International Airport</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #003f87;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header p:last-child {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+        .header img {
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .airport-info {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .airport-info h2 {
+            color: #003f87;
+            margin-top: 0;
+        }
+        .airport-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .airport-detail {
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+       .airline-select {
+            flex-grow: 1;
+            min-width: 250px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+
+        .filter-container {
+            display: flex;
+            gap: 10px;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .filter-btn.active {
+            background-color: #003f87;
+            color: white;
+        }
+        .filter-btn:not(.active) {
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        .flight-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .flight-table th, .flight-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .flight-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .flight-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        .airline-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .airline-cell {
+            display: flex;
+            align-items: center;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+        }
+        .error {
+            color: red;
+            text-align: center;
+            padding: 20px;
+        }
+        .loading-inline {
+            font-size: 12px;
+            color: #666;
+            margin-left: 5px;
+        }
+        .refresh-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .refresh-btn:hover {
+            background-color: #218838;
+        }
+        .no-data {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Vuelos (Flights) El Salvador - Hospitality Smart Room</h1>
+            <p>Real-time flight information in El Salvador</p>
+            <p>All information presented is provided by <img src="assets/img/Aerolineas/Aviation-Edge-logo.png" alt="" width="100"></p>
+        </div>
+
+        <div class="airport-info">
+            <h2>Airport Information</h2>
+            <div class="airport-details">
+                <div class="airport-detail">
+                    <strong>Airport:</strong> El Salvador International
+                </div>
+                <div class="airport-detail">
+                    <strong>Country:</strong> El Salvador (SV)
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <select id="airlineSelect" class="airline-select">
+                <option value="all">All Airlines</option>
+            </select>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="departure">Departures</button>
+                <button class="filter-btn" data-filter="arrival">Arrivals</button>
+                <button class="refresh-btn" onclick="obtenerVuelos()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            Loading flight data...
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <table class="flight-table">
+            <thead>
+                <tr>
+                    <th>Airline</th>
+                    <th>Flight Number</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Gate</th>
+                    <th>Scheduled Time</th>
+                </tr>
+            </thead>
+            <tbody id="flightData">
+                <!-- Flight data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const API_KEY = 'd23727-443916';
+        const BASE_URL = 'https://aviation-edge.com/v2/public';
+        const AIRPORT_INFO = {
+            codeIataAirport: "SAL",
+            nameAirport: "El Salvador International",
+            timezone: "America/El_Salvador"
+        };
+
+        // Airline logos mapping
+        const AIRLINE_LOGOS = {
+         'AA': 'assets/img/Aerolineas/americanairlines.png', //American Airlines
+         'UA': 'assets/img/Aerolineas/unitedairlines.png', // United Airlines
+         'AV': 'assets/img/Aerolineas/avianca.png', // Avianca
+         'CM': 'assets/img/Aerolineas/copaairlines.png', // Copa Airlines
+         'THY': 'assets/img/Aerolineas/aircanada.png', //Air Canada
+         'IB': 'assets/img/Aerolineas/iberia.png	', //Iberia
+         'KL': 'assets/img/Aerolineas/klm.png', //KLM
+         'AC': 'assets/img/Aerolineas/aircanada.png', //AirCanada
+         'DL': 'assets/img/Aerolineas/delta.png', //Delta
+         'B6': 'assets/img/Aerolineas/jeblue.png', //JetBlue Airways
+         'TK': 'assets/img/Aerolineas/turkish.png', //Turkish Airlines
+         'Y4': 'assets/img/Aerolineas/volaris.png', //Volaris
+         'OV': 'assets/img/Aerolineas/salamair.png', //SalamAir
+         'QR': 'assets/img/Aerolineas/qatar.png', //Qatar Airways
+         'AF': 'assets/img/Aerolineas/airfrance.png', //Air France
+         'AM': 'assets/img/Aerolineas/aeromexico.png', //aero mexico
+         'BR': 'assets/img/Aerolineas/eva.png', //EVA AIR
+         'NH': 'assets/img/Aerolineas/ana.png', //ANA
+         'FX': 'assets/img/Aerolineas/fedex.png', //FedEx
+         'F9': 'assets/img/Aerolineas/frontier.png', // Frontier Airlines
+         'M6': 'assets/img/Aerolineas/amerijet.png', //Amerijet International
+		 'DW':'assets/img/Aerolineas/flycana.png', //Flycana
+		 'Q4':'assets/img/Aerolineas/starlink.png', //starlink
+		 'GRF':'assets/img/Aerolineas/gryphonairlines.png', //Gryphon Airlines
+		 'TS':'assets/img/Aerolineas/airtransat.png', //Air Transat
+		 '6R':'assets/img/Aerolineas/arounion.png', //AeroUnion
+         'NK':'assets/img/Aerolineas/spirit.png', //spirit
+         '6R':'assets/img/Aerolineas/china_northwest.png', //china_northwest
+         'G6':'assets/img/Aerolineas/denim.png', //denim
+         'Y3':'assets/img/Aerolineas/gryphonairlines.png', //gryphonairlines
+         '5D':'assets/img/Aerolineas/aerolitoral.png', //aerolitoral
+
+
+
+
+		 
+     };
+
+        let currentFlights = [];
+        let currentFilter = 'all';
+        const airportsCache = new Map();
+        const airlinesCache = new Map();
+
+        async function fetchAirportDetails(iataCode) {
+            if (!iataCode) return { name: 'N/A', iataCode: 'N/A' };
+            
+            if (airportsCache.has(iataCode)) {
+                return airportsCache.get(iataCode);
+            }
+
+            try {
+                const response = await fetch(`${BASE_URL}/airportDatabase?key=${API_KEY}&codeIataAirport=${iataCode}`);
+                if (!response.ok) throw new Error('Airport fetch failed');
+                
+                const data = await response.json();
+                if (data && data.length > 0) {
+                    const airport = data[0];
+                    const airportInfo = {
+                        name: `${airport.nameAirport}, ${airport.nameCountry}`,
+                        iataCode: airport.codeIataAirport
+                    };
+                    airportsCache.set(iataCode, airportInfo);
+                    return airportInfo;
+                }
+                throw new Error('Airport not found');
+            } catch (error) {
+                console.error(`Error fetching airport ${iataCode}:`, error);
+                return { name: iataCode, iataCode: iataCode };
+            }
+        }
+
+        async function fetchAirlineDetails(iataCode) {
+            if (!iataCode) return { name: 'N/A', iataCode: 'N/A' };
+
+            if (airlinesCache.has(iataCode)) {
+                return airlinesCache.get(iataCode);
+            }
+
+            try {
+                const response = await fetch(`${BASE_URL}/airlineDatabase?key=${API_KEY}&codeIataAirline=${iataCode}`);
+                if (!response.ok) throw new Error('Airline fetch failed');
+                
+                const data = await response.json();
+                if (data && data.length > 0) {
+                    const airline = data[0];
+                    const airlineInfo = {
+                        name: airline.nameAirline,
+                        iataCode: airline.codeIataAirline
+                    };
+                    airlinesCache.set(iataCode, airlineInfo);
+                    return airlineInfo;
+                }
+                throw new Error('Airline not found');
+            } catch (error) {
+                console.error(`Error fetching airline ${iataCode}:`, error);
+                return { name: iataCode, iataCode: iataCode };
+            }
+        }
+
+        async function displayFlights(flights) {
+            const flightDataBody = document.getElementById('flightData');
+            flightDataBody.innerHTML = '';
+
+            if (flights.length === 0) {
+                flightDataBody.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="no-data">No flights available with current filters</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            for (const flight of flights) {
+                const row = document.createElement('tr');
+                const isDeparture = flight.type === 'departure';
+                const scheduledTime = isDeparture ? flight.departure?.scheduledTime : flight.arrival?.scheduledTime;
+                const airlineCode = flight.airline?.iataCode;
+                const logoUrl = AIRLINE_LOGOS[airlineCode] || '/api/placeholder/30/30';
+                
+                const originCode = isDeparture ? AIRPORT_INFO.codeIataAirport : flight.departure?.iataCode;
+                const destCode = isDeparture ? flight.arrival?.iataCode : AIRPORT_INFO.codeIataAirport;
+                
+                const [originAirport, destAirport, airlineInfo] = await Promise.all([
+                    fetchAirportDetails(originCode),
+                    fetchAirportDetails(destCode),
+                    fetchAirlineDetails(airlineCode)
+                ]);
+                
+                row.innerHTML = `
+                    <td class="airline-cell">
+                        <img src="${logoUrl}" alt="${airlineInfo.name}" class="airline-logo">
+                        ${airlineInfo.name || 'N/A'}
+                    </td>
+                    <td>${flight.flight?.iataNumber || 'N/A'}</td>
+                    <td>${originAirport.name}</td>
+                    <td>${destAirport.name}</td>
+                    <td>${traducirEstado(flight.status)}</td>
+                    <td>${flight.departure?.gate || flight.arrival?.gate || 'N/A'}</td>
+                    <td>${formatearHora(scheduledTime)}</td>
+                `;
+                flightDataBody.appendChild(row);
+            }
+        }
+
+        async function populateAirlineSelect(flights) {
+            const select = document.getElementById('airlineSelect');
+            const uniqueAirlines = new Set();
+            
+            flights.forEach(flight => {
+                if (flight.airline?.iataCode) {
+                    uniqueAirlines.add(flight.airline.iataCode);
+                }
+            });
+
+            select.innerHTML = '<option value="all">All Airlines</option>';
+
+            const airlinePromises = [...uniqueAirlines].map(async (code) => {
+                const airlineInfo = await fetchAirlineDetails(code);
+                return {
+                    code: airlineInfo.iataCode,
+                    name: airlineInfo.name
+                };
+            });
+
+            const airlines = await Promise.all(airlinePromises);
+            
+            airlines.sort((a, b) => a.name.localeCompare(b.name)).forEach(airline => {
+                const option = document.createElement('option');
+                option.value = airline.code;
+                option.textContent = airline.name;
+                select.appendChild(option);
+            });
+        }
+
+        function filterFlights() {
+            const selectedAirline = document.getElementById('airlineSelect').value;
+            let filteredFlights = currentFlights;
+
+            if (selectedAirline !== 'all') {
+                filteredFlights = filteredFlights.filter(flight => 
+                    flight.airline?.iataCode === selectedAirline
+                );
+            }
+
+            if (currentFilter !== 'all') {
+                filteredFlights = filteredFlights.filter(flight => 
+                    currentFilter === 'departure' ? flight.type === 'departure' : flight.type === 'arrival'
+                );
+            }
+
+            displayFlights(filteredFlights);
+        }
+
+        function traducirEstado(status) {
+            const estados = {
+                'scheduled': 'Programado',
+                'active': 'Despego',
+                'landed': 'Aterrizo',
+                'cancelled': 'Cancelado',
+                'delayed': 'Retrasado',
+                'expected': 'Esperado',
+                'departed': 'Departed',
+                'approaching': 'Aproximandose',
+                'arrived': 'Arrived'
+            };
+            return estados[status?.toLowerCase()] || 'N/A';
+        }
+
+        function formatearHora(timestamp) {
+            if (!timestamp) return 'N/A';
+            try {
+                const fecha = new Date(timestamp);
+                if (isNaN(fecha.getTime())) return 'N/A';
+                return fecha.toLocaleString('en-US', { 
+                    hour: '2-digit', 
+                    minute: '2-digit', 
+                    day: '2-digit', 
+                    month: '2-digit', 
+                    year: 'numeric' 
+                });
+            } catch (error) {
+                return 'N/A';
+            }
+        }
+
+        async function obtenerVuelos() {
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('error');
+            
+            loadingDiv.style.display = 'block';
+            errorDiv.style.display = 'none';
+
+            try {
+                const [departures, arrivals] = await Promise.all([
+                    fetch(`${BASE_URL}/timetable?key=${API_KEY}&iataCode=${AIRPORT_INFO.codeIataAirport}&type=departure`),
+                    fetch(`${BASE_URL}/timetable?key=${API_KEY}&iataCode=${AIRPORT_INFO.codeIataAirport}&type=arrival`)
+                ]);
+
+                if (!departures.ok || !arrivals.ok) {
+                    throw new Error('Error fetching flight data');
+                }
+
+                const departuresData = await departures.json();
+                const arrivalsData = await arrivals.json();
+                
+                currentFlights = [
+                    ...departuresData.map(flight => ({...flight, type: 'departure'})),
+                    ...arrivalsData.map(flight => ({...flight, type: 'arrival'}))
+                ];
+
+                await populateAirlineSelect(currentFlights);
+                await filterFlights();
+                
+            } catch (error) {
+                errorDiv.textContent = 'Error loading flight data. Please try again.';
+                errorDiv.style.display = 'block';
+                console.error('Error:', error);
+            } finally {
+                loadingDiv.style.display = 'none';
+            }
+        }
+
+        function initializeEventListeners() {
+            // Initialize airline select filter
+            document.getElementById('airlineSelect').addEventListener('change', filterFlights);
+            
+            // Initialize flight type filters
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentFilter = e.target.dataset.filter;
+                    filterFlights();
+                });
+            });
+        }
+
+        function iniciarActualizacionAutomatica() {
+            // Update every 5 minutes
+            setInterval(obtenerVuelos, 5 * 60 * 1000);
+        }
+
+        function manejarErrorRed(error) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = `Connection error: ${error.message}. Please check your internet connection.`;
+            errorDiv.style.display = 'block';
+        }
+
+        function mostrarNotificacion(mensaje, tipo = 'info') {
+            const notificacion = document.createElement('div');
+            notificacion.className = `notificacion ${tipo}`;
+            notificacion.textContent = mensaje;
+            
+            document.body.appendChild(notificacion);
+            
+            setTimeout(() => {
+                notificacion.classList.add('fadeout');
+                setTimeout(() => {
+                    document.body.removeChild(notificacion);
+                }, 500);
+            }, 3000);
+        }
+
+        function inicializarAplicacion() {
+            // Initialize event listeners
+            initializeEventListeners();
+            
+            // Load initial data
+            obtenerVuelos();
+            
+            // Start automatic updates
+            iniciarActualizacionAutomatica();
+        }
+
+        // Initialize the application when the DOM is ready
+        document.addEventListener('DOMContentLoaded', inicializarAplicacion);
+    </script>
+
+
+</body>
+</html>

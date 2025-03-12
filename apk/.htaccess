@@ -1,0 +1,6 @@
+# Habilitar la visualización de directorios
+Options +Indexes
+
+# Opciones adicionales para personalizar la visualización
+IndexOptions +FancyIndexing
+IndexIgnore .htaccess
