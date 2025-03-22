@@ -1,0 +1,1352 @@
+[
+    {
+        "Airline": "",
+        "Flight": "572",
+        "Destination": "GUATEMALA",
+        "Scheduled": "08:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "430",
+        "Destination": "MEXICO",
+        "Scheduled": "09:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "582",
+        "Destination": "WASHINGTON",
+        "Scheduled": "09:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "4320",
+        "Destination": "HOUSTON",
+        "Scheduled": "09:23"
+    },
+    {
+        "Airline": "",
+        "Flight": "383",
+        "Destination": "BOGOTA",
+        "Scheduled": "09:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "609",
+        "Destination": "SAN JOSE",
+        "Scheduled": "10:15"
+    },
+    {
+        "Airline": "",
+        "Flight": "650",
+        "Destination": "CANCUN",
+        "Scheduled": "10:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "865",
+        "Destination": "PANAMA",
+        "Scheduled": "11:09"
+    },
+    {
+        "Airline": "",
+        "Flight": "317",
+        "Destination": "PANAMA",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "584",
+        "Destination": "WASHINGTON",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "319",
+        "Destination": "SAN JOSE",
+        "Scheduled": "12:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "1494",
+        "Destination": "MIAMI",
+        "Scheduled": "13:10"
+    },
+    {
+        "Airline": "",
+        "Flight": "1024",
+        "Destination": "DALLAS-FORT WORTH",
+        "Scheduled": "13:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "421",
+        "Destination": "ROATAN",
+        "Scheduled": "13:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "871",
+        "Destination": "PANAMA",
+        "Scheduled": "13:42"
+    },
+    {
+        "Airline": "",
+        "Flight": "1468",
+        "Destination": "HOUSTON",
+        "Scheduled": "13:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "1978",
+        "Destination": "ATLANTA",
+        "Scheduled": "13:57"
+    },
+    {
+        "Airline": "",
+        "Flight": "629",
+        "Destination": "MEXICO",
+        "Scheduled": "14:37"
+    },
+    {
+        "Airline": "",
+        "Flight": "1130",
+        "Destination": "HOUSTON",
+        "Scheduled": "15:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "131",
+        "Destination": "BOGOTA",
+        "Scheduled": "16:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "4084",
+        "Destination": "NEW YORK",
+        "Scheduled": "17:17"
+    },
+    {
+        "Airline": "",
+        "Flight": "530",
+        "Destination": "ONTARIO",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "",
+        "Flight": "560",
+        "Destination": "SAN FRANCISCO",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "",
+        "Flight": "617",
+        "Destination": "SAN JOSE",
+        "Scheduled": "17:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "4308",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "17:44"
+    },
+    {
+        "Airline": "",
+        "Flight": "534",
+        "Destination": "SAN PEDRO SULA",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "588",
+        "Destination": "GUATEMALA",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "448",
+        "Destination": "PALMEROLA",
+        "Scheduled": "17:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "4312",
+        "Destination": "WASHINGTON",
+        "Scheduled": "17:51"
+    },
+    {
+        "Airline": "",
+        "Flight": "520",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "17:55"
+    },
+    {
+        "Airline": "",
+        "Flight": "528",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "18:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "670",
+        "Destination": "NEW YORK",
+        "Scheduled": "18:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "570",
+        "Destination": "NEW YORK",
+        "Scheduled": "19:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "590",
+        "Destination": "WASHINGTON",
+        "Scheduled": "20:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "222",
+        "Destination": "MADRID",
+        "Scheduled": "21:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "315",
+        "Destination": "MANAGUA",
+        "Scheduled": "21:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "593",
+        "Destination": "GUAYAQUIL",
+        "Scheduled": "22:00"
+    },
+    {
+        "Airline": "",
+        "Flight": "578",
+        "Destination": "GUATEMALA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "580",
+        "Destination": "WASHINGTON",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "365",
+        "Destination": "BOGOTA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "452",
+        "Destination": "PALMEROLA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "651",
+        "Destination": "SAN JOSE",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "369",
+        "Destination": "MEDELLIN",
+        "Scheduled": "22:10"
+    },
+    {
+        "Airline": "",
+        "Flight": "429",
+        "Destination": "LIMA",
+        "Scheduled": "22:15"
+    },
+    {
+        "Airline": "",
+        "Flight": "568",
+        "Destination": "NEW YORK",
+        "Scheduled": "22:55"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                572",
+        "Destination": "GUATEMALA",
+        "Scheduled": "08:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                430",
+        "Destination": "MEXICO",
+        "Scheduled": "09:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                582",
+        "Destination": "WASHINGTON",
+        "Scheduled": "09:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "N3\n                                                                4320",
+        "Destination": "HOUSTON",
+        "Scheduled": "09:23"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                383",
+        "Destination": "BOGOTA",
+        "Scheduled": "09:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                609",
+        "Destination": "SAN JOSE",
+        "Scheduled": "10:15"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                650",
+        "Destination": "CANCUN",
+        "Scheduled": "10:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "CM\n                                                                865",
+        "Destination": "PANAMA",
+        "Scheduled": "11:09"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                317",
+        "Destination": "PANAMA",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                584",
+        "Destination": "WASHINGTON",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                319",
+        "Destination": "SAN JOSE",
+        "Scheduled": "12:20"
+    },
+    {
+        "Airline": "",
+        "Flight": "AA\n                                                                1494",
+        "Destination": "MIAMI",
+        "Scheduled": "13:10"
+    },
+    {
+        "Airline": "",
+        "Flight": "AA\n                                                                1024",
+        "Destination": "DALLAS-FORT WORTH",
+        "Scheduled": "13:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "5U\n                                                                421",
+        "Destination": "ROATAN",
+        "Scheduled": "13:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "CM\n                                                                871",
+        "Destination": "PANAMA",
+        "Scheduled": "13:42"
+    },
+    {
+        "Airline": "",
+        "Flight": "UA\n                                                                1468",
+        "Destination": "HOUSTON",
+        "Scheduled": "13:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "DL\n                                                                1978",
+        "Destination": "ATLANTA",
+        "Scheduled": "13:57"
+    },
+    {
+        "Airline": "",
+        "Flight": "AM\n                                                                629",
+        "Destination": "MEXICO",
+        "Scheduled": "14:37"
+    },
+    {
+        "Airline": "",
+        "Flight": "UA\n                                                                1130",
+        "Destination": "HOUSTON",
+        "Scheduled": "15:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                131",
+        "Destination": "BOGOTA",
+        "Scheduled": "16:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "Q6\n                                                                4084",
+        "Destination": "NEW YORK",
+        "Scheduled": "17:17"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                530",
+        "Destination": "ONTARIO",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                560",
+        "Destination": "SAN FRANCISCO",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                617",
+        "Destination": "SAN JOSE",
+        "Scheduled": "17:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "N3\n                                                                4308",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "17:44"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                534",
+        "Destination": "SAN PEDRO SULA",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                588",
+        "Destination": "GUATEMALA",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                448",
+        "Destination": "PALMEROLA",
+        "Scheduled": "17:50"
+    },
+    {
+        "Airline": "",
+        "Flight": "N3\n                                                                4312",
+        "Destination": "WASHINGTON",
+        "Scheduled": "17:51"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                520",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "17:55"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                528",
+        "Destination": "LOS ANGELES",
+        "Scheduled": "18:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                670",
+        "Destination": "NEW YORK",
+        "Scheduled": "18:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                570",
+        "Destination": "NEW YORK",
+        "Scheduled": "19:45"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                590",
+        "Destination": "WASHINGTON",
+        "Scheduled": "20:30"
+    },
+    {
+        "Airline": "",
+        "Flight": "IB\n                                                                222",
+        "Destination": "MADRID",
+        "Scheduled": "21:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                315",
+        "Destination": "MANAGUA",
+        "Scheduled": "21:40"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                593",
+        "Destination": "GUAYAQUIL",
+        "Scheduled": "22:00"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                578",
+        "Destination": "GUATEMALA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                580",
+        "Destination": "WASHINGTON",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                365",
+        "Destination": "BOGOTA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                452",
+        "Destination": "PALMEROLA",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                651",
+        "Destination": "SAN JOSE",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                369",
+        "Destination": "MEDELLIN",
+        "Scheduled": "22:10"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                429",
+        "Destination": "LIMA",
+        "Scheduled": "22:15"
+    },
+    {
+        "Airline": "",
+        "Flight": "AV\n                                                                568",
+        "Destination": "NEW YORK",
+        "Scheduled": "22:55"
+    },
+    {
+        "Airline": "08:45",
+        "Flight": "Took off",
+        "Destination": "",
+        "Scheduled": "08:45"
+    },
+    {
+        "Airline": "09:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:05"
+    },
+    {
+        "Airline": "09:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:20"
+    },
+    {
+        "Airline": "09:23",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:23"
+    },
+    {
+        "Airline": "09:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:30"
+    },
+    {
+        "Airline": "10:15",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "10:15"
+    },
+    {
+        "Airline": "10:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "10:20"
+    },
+    {
+        "Airline": "11:09",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:09"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "12:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "12:20"
+    },
+    {
+        "Airline": "13:10",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:10"
+    },
+    {
+        "Airline": "13:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:30"
+    },
+    {
+        "Airline": "13:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:40"
+    },
+    {
+        "Airline": "13:42",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:42"
+    },
+    {
+        "Airline": "13:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:50"
+    },
+    {
+        "Airline": "13:57",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:57"
+    },
+    {
+        "Airline": "14:37",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "14:37"
+    },
+    {
+        "Airline": "15:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "15:40"
+    },
+    {
+        "Airline": "16:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "16:05"
+    },
+    {
+        "Airline": "17:17",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:17"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:40"
+    },
+    {
+        "Airline": "17:44",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:44"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:50"
+    },
+    {
+        "Airline": "17:51",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:51"
+    },
+    {
+        "Airline": "17:55",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:55"
+    },
+    {
+        "Airline": "18:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "18:40"
+    },
+    {
+        "Airline": "18:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "18:45"
+    },
+    {
+        "Airline": "19:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "19:45"
+    },
+    {
+        "Airline": "20:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "20:30"
+    },
+    {
+        "Airline": "21:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "21:05"
+    },
+    {
+        "Airline": "21:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "21:40"
+    },
+    {
+        "Airline": "22:00",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:00"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:10",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:10"
+    },
+    {
+        "Airline": "22:15",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:15"
+    },
+    {
+        "Airline": "22:55",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:55"
+    },
+    {
+        "Airline": "08:45",
+        "Flight": "07",
+        "Destination": "Took off",
+        "Scheduled": "08:45"
+    },
+    {
+        "Airline": "09:05",
+        "Flight": "08",
+        "Destination": "Expected",
+        "Scheduled": "09:05"
+    },
+    {
+        "Airline": "09:20",
+        "Flight": "18",
+        "Destination": "Expected",
+        "Scheduled": "09:20"
+    },
+    {
+        "Airline": "09:23",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "09:23"
+    },
+    {
+        "Airline": "09:30",
+        "Flight": "11",
+        "Destination": "Expected",
+        "Scheduled": "09:30"
+    },
+    {
+        "Airline": "10:15",
+        "Flight": "03",
+        "Destination": "Expected",
+        "Scheduled": "10:15"
+    },
+    {
+        "Airline": "10:20",
+        "Flight": "06",
+        "Destination": "Expected",
+        "Scheduled": "10:20"
+    },
+    {
+        "Airline": "11:09",
+        "Flight": "17",
+        "Destination": "Expected",
+        "Scheduled": "11:09"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "11",
+        "Destination": "Expected",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "12:20",
+        "Flight": "03",
+        "Destination": "Expected",
+        "Scheduled": "12:20"
+    },
+    {
+        "Airline": "13:10",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "13:10"
+    },
+    {
+        "Airline": "13:30",
+        "Flight": "12",
+        "Destination": "Expected",
+        "Scheduled": "13:30"
+    },
+    {
+        "Airline": "13:40",
+        "Flight": "09",
+        "Destination": "Expected",
+        "Scheduled": "13:40"
+    },
+    {
+        "Airline": "13:42",
+        "Flight": "10",
+        "Destination": "Expected",
+        "Scheduled": "13:42"
+    },
+    {
+        "Airline": "13:50",
+        "Flight": "18",
+        "Destination": "Expected",
+        "Scheduled": "13:50"
+    },
+    {
+        "Airline": "13:57",
+        "Flight": "17",
+        "Destination": "Expected",
+        "Scheduled": "13:57"
+    },
+    {
+        "Airline": "14:37",
+        "Flight": "06",
+        "Destination": "Expected",
+        "Scheduled": "14:37"
+    },
+    {
+        "Airline": "15:40",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "15:40"
+    },
+    {
+        "Airline": "16:05",
+        "Flight": "11",
+        "Destination": "Expected",
+        "Scheduled": "16:05"
+    },
+    {
+        "Airline": "17:17",
+        "Flight": "07",
+        "Destination": "Expected",
+        "Scheduled": "17:17"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "02",
+        "Destination": "Expected",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "01",
+        "Destination": "Expected",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:40",
+        "Flight": "03",
+        "Destination": "Expected",
+        "Scheduled": "17:40"
+    },
+    {
+        "Airline": "17:44",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "17:44"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "12",
+        "Destination": "Expected",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "10",
+        "Destination": "Expected",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:50",
+        "Flight": "08",
+        "Destination": "Expected",
+        "Scheduled": "17:50"
+    },
+    {
+        "Airline": "17:51",
+        "Flight": "17",
+        "Destination": "Expected",
+        "Scheduled": "17:51"
+    },
+    {
+        "Airline": "17:55",
+        "Flight": "14",
+        "Destination": "Expected",
+        "Scheduled": "17:55"
+    },
+    {
+        "Airline": "18:40",
+        "Flight": "18",
+        "Destination": "Expected",
+        "Scheduled": "18:40"
+    },
+    {
+        "Airline": "18:45",
+        "Flight": "04",
+        "Destination": "Expected",
+        "Scheduled": "18:45"
+    },
+    {
+        "Airline": "19:45",
+        "Flight": "06",
+        "Destination": "Expected",
+        "Scheduled": "19:45"
+    },
+    {
+        "Airline": "20:30",
+        "Flight": "17",
+        "Destination": "Expected",
+        "Scheduled": "20:30"
+    },
+    {
+        "Airline": "21:05",
+        "Flight": "11",
+        "Destination": "Expected",
+        "Scheduled": "21:05"
+    },
+    {
+        "Airline": "21:40",
+        "Flight": "04",
+        "Destination": "Expected",
+        "Scheduled": "21:40"
+    },
+    {
+        "Airline": "22:00",
+        "Flight": "01",
+        "Destination": "Expected",
+        "Scheduled": "22:00"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "10",
+        "Destination": "Expected",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "15",
+        "Destination": "Expected",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "05",
+        "Destination": "Expected",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "07",
+        "Destination": "Expected",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "03",
+        "Destination": "Expected",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:10",
+        "Flight": "02",
+        "Destination": "Expected",
+        "Scheduled": "22:10"
+    },
+    {
+        "Airline": "22:15",
+        "Flight": "08",
+        "Destination": "Expected",
+        "Scheduled": "22:15"
+    },
+    {
+        "Airline": "22:55",
+        "Flight": "19",
+        "Destination": "Expected",
+        "Scheduled": "22:55"
+    },
+    {
+        "Airline": "08:45",
+        "Flight": "Took off",
+        "Destination": "",
+        "Scheduled": "08:45"
+    },
+    {
+        "Airline": "09:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:05"
+    },
+    {
+        "Airline": "09:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:20"
+    },
+    {
+        "Airline": "09:23",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:23"
+    },
+    {
+        "Airline": "09:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "09:30"
+    },
+    {
+        "Airline": "10:15",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "10:15"
+    },
+    {
+        "Airline": "10:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "10:20"
+    },
+    {
+        "Airline": "11:09",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:09"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "11:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "11:50"
+    },
+    {
+        "Airline": "12:20",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "12:20"
+    },
+    {
+        "Airline": "13:10",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:10"
+    },
+    {
+        "Airline": "13:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:30"
+    },
+    {
+        "Airline": "13:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:40"
+    },
+    {
+        "Airline": "13:42",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:42"
+    },
+    {
+        "Airline": "13:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:50"
+    },
+    {
+        "Airline": "13:57",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "13:57"
+    },
+    {
+        "Airline": "14:37",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "14:37"
+    },
+    {
+        "Airline": "15:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "15:40"
+    },
+    {
+        "Airline": "16:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "16:05"
+    },
+    {
+        "Airline": "17:17",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:17"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:35",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:35"
+    },
+    {
+        "Airline": "17:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:40"
+    },
+    {
+        "Airline": "17:44",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:44"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:45"
+    },
+    {
+        "Airline": "17:50",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:50"
+    },
+    {
+        "Airline": "17:51",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:51"
+    },
+    {
+        "Airline": "17:55",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "17:55"
+    },
+    {
+        "Airline": "18:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "18:40"
+    },
+    {
+        "Airline": "18:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "18:45"
+    },
+    {
+        "Airline": "19:45",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "19:45"
+    },
+    {
+        "Airline": "20:30",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "20:30"
+    },
+    {
+        "Airline": "21:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "21:05"
+    },
+    {
+        "Airline": "21:40",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "21:40"
+    },
+    {
+        "Airline": "22:00",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:00"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:05",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:05"
+    },
+    {
+        "Airline": "22:10",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:10"
+    },
+    {
+        "Airline": "22:15",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:15"
+    },
+    {
+        "Airline": "22:55",
+        "Flight": "Expected",
+        "Destination": "",
+        "Scheduled": "22:55"
+    }
+]
